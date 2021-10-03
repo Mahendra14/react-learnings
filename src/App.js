@@ -1,8 +1,13 @@
 import React from 'react'
 
+
+//below are imports for the conditional rendering
+import Setup from './tutorial/3-conditional-rendering/setup/1-multiple-returns'
+import Final from './tutorial/3-conditional-rendering/final/1-multiple-returns'
+
 //below are imports for useEffect
-import Setup from './tutorial/2-useEffect/setup/3-useEffect-fetch-data'
-import Final from './tutorial/2-useEffect/final/3-useEffect-fetch-data'
+// import Setup from './tutorial/2-useEffect/setup/3-useEffect-fetch-data'
+// import Final from './tutorial/2-useEffect/final/3-useEffect-fetch-data'
 
 //below are imports for useState
 // import Setup from './tutorial/1-useState/setup/5-useState-counter'
