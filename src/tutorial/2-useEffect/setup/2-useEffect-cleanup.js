@@ -15,6 +15,7 @@ const UseEffectCleanup = () => {
   //the problem hereis an event listener is being added every time the window is resized to overcome this we can use one of two techniques: just call useeffect only during first render that is [] or write a clean up function to remove the event listentner (spoiler: second is most useful as times when we deal with larger projects it is most prominent and useful)
   useEffect(() => {
     window.addEventListener('resize',changeValue);
+    //the below return function is called cleanup function
     return () => {
       window.removeEventListener('resize',changeValue);
     }
