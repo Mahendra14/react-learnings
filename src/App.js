@@ -2,8 +2,8 @@ import React from 'react'
 
 
 //below are imports for the conditional rendering
-import Setup from './tutorial/3-conditional-rendering/setup/2-short-circuit'
-import Final from './tutorial/3-conditional-rendering/final/2-short-circuit'
+import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide'
+import Final from './tutorial/3-conditional-rendering/final/3-show-hide'
 
 //below are imports for useEffect
 // import Setup from './tutorial/2-useEffect/setup/3-useEffect-fetch-data'
