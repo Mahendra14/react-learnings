@@ -14,6 +14,8 @@ const ShortCircuit = () => {
   //here we are returning somehting if and only if the first one is true.
   const secondValue = text && 'hello world';
 
+  const [isErr,setIsErr] = useState(false);
+
   return (<>
     {/* <h2>{firstValue}</h2>
     <h2>{secondValue}</h2> */}
@@ -21,6 +23,8 @@ const ShortCircuit = () => {
     <h1>{text || 'John Doe'}</h1>
     <h1>{text && 'Mahendra'}</h1>
     <h2>{!text && 'Mahedra'}</h2>
+    <button className="btn" onClick= {() => setIsErr(!isErr)}>Toggle Error!</button>
+    {isErr && <h2>Error... </h2>}
     </>
   );
 };
