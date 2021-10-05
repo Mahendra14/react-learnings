@@ -33,9 +33,9 @@ const Text = () => {
     }
   },[]);
   return(
-    <div>
+    <div style = {{ marginTop : '2rem'}}>
       <h1>Window Size</h1>
-      <h2>{size}</h2>
+      <h2>{size} px</h2>
     </div>
   );
 }
