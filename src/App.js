@@ -1,9 +1,14 @@
 import React from 'react'
 
 
+
+//below are the imports for the forms
+import Setup from './tutorial/4-forms/setup/1-controlled-inputs'
+import Final from './tutorial/4-forms/final/1-controlled-inputs'
+
 //below are imports for the conditional rendering
-import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide'
-import Final from './tutorial/3-conditional-rendering/final/3-show-hide'
+// import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide'
+// import Final from './tutorial/3-conditional-rendering/final/3-show-hide'
 
 //below are imports for useEffect
 // import Setup from './tutorial/2-useEffect/setup/3-useEffect-fetch-data'
@@ -16,7 +21,7 @@ function App() {
   return (
     <div className='container'>
       <Setup/>
-      {/* <Final/> */}
+      <Final/>
     </div>
   )
 }

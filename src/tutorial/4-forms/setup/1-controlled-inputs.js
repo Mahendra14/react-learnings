@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-// JS
+// JS way of handling forms
 // const input = document.getElementById('myText');
 // const inputValue = input.value
-// React
+// React way of handling forms
 // value, onChange
 
 const ControlledInputs = () => {
