@@ -25,6 +25,7 @@ const ShortCircuit = () => {
     <h2>{!text && 'Mahedra'}</h2>
     <button className="btn" onClick= {() => setIsErr(!isErr)}>Toggle Error!</button>
     {isErr && <h2>Error... </h2>}
+    {isErr ? <h2>There is an Error(aka from terneray operator)</h2>: <h2>There is no error(aka from ternary operator)</h2> }
     </>
   );
 };
