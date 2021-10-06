@@ -3,8 +3,8 @@ import React from 'react'
 
 
 //below are the imports for the forms
-import Setup from './tutorial/4-forms/setup/1-controlled-inputs'
-import Final from './tutorial/4-forms/final/1-controlled-inputs'
+import Setup from './tutorial/4-forms/setup/2-multiple-inputs'
+import Final from './tutorial/4-forms/final/2-multiple-inputs'
 
 //below are imports for the conditional rendering
 // import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide'
