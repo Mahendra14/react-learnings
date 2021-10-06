@@ -1,10 +1,13 @@
 import React from 'react'
 
 
+//below are the imports for the useRef
+import Setup from './tutorial/5-useRef/setup/1-useRef-basics'
+import Final from './tutorial/5-useRef/final/1-useRef-basics'
 
 //below are the imports for the forms
-import Setup from './tutorial/4-forms/setup/2-multiple-inputs'
-import Final from './tutorial/4-forms/final/2-multiple-inputs'
+// import Setup from './tutorial/4-forms/setup/2-multiple-inputs'
+// import Final from './tutorial/4-forms/final/2-multiple-inputs'
 
 //below are imports for the conditional rendering
 // import Setup from './tutorial/3-conditional-rendering/setup/3-show-hide'
@@ -21,7 +24,7 @@ function App() {
   return (
     <div className='container'>
       <Setup/>
-      {/* <Final/> */}
+      <Final/>
     </div>
   )
 }
