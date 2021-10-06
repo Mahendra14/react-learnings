@@ -3,10 +3,31 @@ import React, { useState } from 'react';
 // const input = document.getElementById('myText');
 // const inputValue = input.value
 // React way of handling forms
-// value, onChange
+// value, onChange in the input method
 
 const ControlledInputs = () => {
-  return <h1>controlled inputs</h1>;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("submitted");
+  }
+  return (
+    <>
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="form-control">
+        <label forhtml="firstName">Name : </label>
+        <input type="text" name="firstName" id="firstName"/>
+      </div>
+      <div className="form-control">
+        <label forhtml="email">Email : </label>
+        <input type="text" name="email" id="email"/>
+      </div>
+      <button className="btn">add person</button>
+
+    </form>
+
+    </>
+  );
 };
 
 export default ControlledInputs;
