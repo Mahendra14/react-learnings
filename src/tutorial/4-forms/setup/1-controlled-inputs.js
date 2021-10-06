@@ -13,7 +13,15 @@ const ControlledInputs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
+    if(firstName && email){
+      //couldve normally used the declaration directly instead of this function approach too.
+      setPeople((p) => {
+        const newPerson = {id:new Date().getTime().toString ,firstName,email};
+        return [...p,newPerson];
+      })
+    }else{
+      console.log("please type something before submitting")
+    }
   }
   return (
     <>
