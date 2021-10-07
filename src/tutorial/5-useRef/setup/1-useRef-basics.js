@@ -12,8 +12,14 @@ const UseRefBasics = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(inputRef.current);
+    console.log(inputRef.current.value);
+    inputRef.current.value = '';
   }
+  // In this case we dont need a dependecy array as we just wanted to focus on it while it reloads and a note is that there is no useState to trigger reload for every change. 
+  useEffect(() => {
+    inputRef.current.focus();
 
+  })
   return (
     <div>
       <form action="" className="form" onSubmit={handleSubmit}>
