@@ -28,7 +28,9 @@ const reducer = (state,action) => {
     modalContent: 'item Added'
     };
   }
-  if(action.type === 'NO_VALUE'){}
+  if(action.type === 'NO_VALUE'){
+    return{ ...state,isModalOpen: true, modalContent: 'please enter a value'};
+  }
   if(action.type === 'CLOSE_MODAL'){}
   if(action.type === 'REMOVE_ITEM'){
     const newPeople = state.people.filter((person) => person.id !== action.payload);
