@@ -1,9 +1,13 @@
 import React from 'react'
 
 
+
+//below are the imports for the useReducer - no need to specify index its a default one
+import Setup from './tutorial/6-useReducer/setup'
+import Final from './tutorial/6-useReducer/final'
 //below are the imports for the useRef
-import Setup from './tutorial/5-useRef/setup/1-useRef-basics'
-import Final from './tutorial/5-useRef/final/1-useRef-basics'
+// import Setup from './tutorial/5-useRef/setup/1-useRef-basics'
+// import Final from './tutorial/5-useRef/final/1-useRef-basics'
 
 //below are the imports for the forms
 // import Setup from './tutorial/4-forms/setup/2-multiple-inputs'
