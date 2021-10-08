@@ -17,7 +17,11 @@ const defaultState = {
 
 //defining reducer in index itself afte code it will be shifted to new file
 const reducer = (state,action) => {
-  return state;
+  if(action.type === 'ADD_ITEM'){}
+  if(action.type === 'NO_VALUE'){}
+  if(action.type === 'CLOSE_MODAL'){}
+  if(action.type === 'REMOVE_ITEM'){}
+  throw new Error('no matching action type declared');
 }
 
 const Index = () => {
@@ -30,11 +34,26 @@ const Index = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("entered here");
+    if(name){
+      const newItem = {id: new Date().getTime().toString(),name};
+      dispatch({type: 'ADD_ITEM',payload: newItem});
+      setName('');
+    }
+    else{
+      dispatch({type: 'NO_VALUE'});
+    }
+  }
+
+
+  const closeModal = () => {
+    dispatch({type: 'CLOSE_MODAL'})
   }
 
   return (
     <>
+    {state.isModalOpen && (
+      <Modal modalContent={state.modalContent} closeModal={closeModal}/>
+    )}
     <form onSubmit={handleSubmit} className="form">
       <div>
         <input type="text" value={name}
@@ -46,7 +65,7 @@ const Index = () => {
       return(
         <div key={person.id} className="item">
           <h4>{person.name}</h4>
-          <button onClick = {() => {}}>Remove</button>
+          <button onClick = {() => dispatch({type: 'REMOVE_ITEM', payload: person.id})}>Remove</button>
         </div>
       );
     })}
