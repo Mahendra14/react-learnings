@@ -1,10 +1,13 @@
 import React from 'react'
 
 
+//below are the imports for prop drilling
+import Setup from './tutorial/7-prop-drilling/setup/1-prop-drilling'
+import Final from './tutorial/7-prop-drilling/final/1-prop-drilling'
 
 //below are the imports for the useReducer - no need to specify index its a default one
-import Setup from './tutorial/6-useReducer/setup'
-import Final from './tutorial/6-useReducer/final'
+// import Setup from './tutorial/6-useReducer/setup'
+// import Final from './tutorial/6-useReducer/final'
 //below are the imports for the useRef
 // import Setup from './tutorial/5-useRef/setup/1-useRef-basics'
 // import Final from './tutorial/5-useRef/final/1-useRef-basics'
@@ -28,7 +31,7 @@ function App() {
   return (
     <div className='container'>
       <Setup/>
-      {/* <Final/> */}
+      <Final/>
     </div>
   )
 }
