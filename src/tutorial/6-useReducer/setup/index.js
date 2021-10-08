@@ -17,7 +17,17 @@ const defaultState = {
 
 //defining reducer in index itself afte code it will be shifted to new file
 const reducer = (state,action) => {
-  if(action.type === 'ADD_ITEM'){}
+  if(action.type === 'ADD_ITEM'){
+    const newPeople = [...state.people,action.payload];
+
+    // here it is only as a precaution using ...state as future use as in this case all three are changed
+    return {
+    ...state,
+    people: newPeople,
+    isModalOpen: true,
+    modalContent: 'item Added'
+    };
+  }
   if(action.type === 'NO_VALUE'){}
   if(action.type === 'CLOSE_MODAL'){}
   if(action.type === 'REMOVE_ITEM'){
