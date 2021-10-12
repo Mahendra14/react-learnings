@@ -43,3 +43,6 @@ const SinglePerson = ({id,name,removePerson}) => {
 }
 
 export default PropDrilling;
+
+
+//so as we see we are sending the function remove person all the way through the components to singleperson not making use of it in any of them. 
