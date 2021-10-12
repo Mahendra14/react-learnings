@@ -1,9 +1,12 @@
 import React from 'react'
 
+//below are the imports for the context api 
+import Setup from './tutorial/8-useContext/setup/1-context-api'
+import Final from './tutorial/8-useContext/final/1-context-api'
 
 //below are the imports for prop drilling
-import Setup from './tutorial/7-prop-drilling/setup/1-prop-drilling'
-import Final from './tutorial/7-prop-drilling/final/1-prop-drilling'
+// import Setup from './tutorial/7-prop-drilling/setup/1-prop-drilling'
+// import Final from './tutorial/7-prop-drilling/final/1-prop-drilling'
 
 //below are the imports for the useReducer - no need to specify index its a default one
 // import Setup from './tutorial/6-useReducer/setup'
@@ -31,7 +34,7 @@ function App() {
   return (
     <div className='container'>
       <Setup/>
-      {/* <Final/> */}
+      <Final/>
     </div>
   )
 }
