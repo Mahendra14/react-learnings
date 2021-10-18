@@ -3,6 +3,10 @@ import { data } from '../../../data';
 // more components
 // fix - context api, redux (for more complex cases)
 
+//creating context
+const PersonContext = React.createContext();
+// two components - Provider, Consumer are taken from this
+
 const ContextAPI = () => {
   const [people, setPeople] = useState(data);
   const removePerson = (id) => {
@@ -11,17 +15,20 @@ const ContextAPI = () => {
     });
   };
   return (
-    <>
-      <h3>prop drilling</h3>
+    <PersonContext.Provider value={{removePerson,people}}>
+      <h3>Context API / useContext </h3>
       <List people={people} removePerson={removePerson} />
-    </>
+    </PersonContext.Provider>
   );
 };
 
 const List = ({ people, removePerson }) => {
+  //here we can take in useContext hook to use it.
+  const mainData = useContext(PersonContext);
+  console.log(mainData);
   return (
     <>
-      {people.map((person) => {
+      {mainData.people.map((person) => {
         return (
           <SinglePerson
             key={person.id}
@@ -34,7 +41,8 @@ const List = ({ people, removePerson }) => {
   );
 };
 
-const SinglePerson = ({ id, name, removePerson }) => {
+const SinglePerson = ({ id, name }) => {
+  const { removePerson } = useContext(PersonContext);
   return (
     <div className='item'>
       <h4>{name}</h4>

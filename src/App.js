@@ -34,7 +34,7 @@ function App() {
   return (
     <div className='container'>
       <Setup/>
-      <Final/>
+      {/* <Final/> */}
     </div>
   )
 }
