@@ -1,9 +1,13 @@
 import React from 'react'
 
 
+//below are teh imports for the prop-types which are super important in react.
+import Setup from './tutorial/10-prop-types/setup'
+import Final from './tutorial/10-prop-types/final'
+
 //below are the imports for the context api
-import Setup from './tutorial/9-custom-hooks/setup/1-fetch-example'
-import Final from './tutorial/9-custom-hooks/final/1-fetch-example'
+// import Setup from './tutorial/9-custom-hooks/setup/1-fetch-example'
+// import Final from './tutorial/9-custom-hooks/final/1-fetch-example'
 
 //below are the imports for the context api 
 // import Setup from './tutorial/8-useContext/setup/1-context-api'

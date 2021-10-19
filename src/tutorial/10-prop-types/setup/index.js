@@ -7,6 +7,7 @@ import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 const url = 'https://course-api.com/react-prop-types-example'
 
 const Index = () => {
+  //making use of our custom hook thats built in the previous one
   const { products } = useFetch(url)
   return (
     <div>
