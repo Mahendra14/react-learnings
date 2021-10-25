@@ -22,7 +22,7 @@ const ReactRouterSetup = () => {
           <About />
         </Route>
         <Route path="/person">
-          <Person />
+          <People />
         </Route>
         {/* it matches anything irrespective of anything. */}
         <Route path="*">
