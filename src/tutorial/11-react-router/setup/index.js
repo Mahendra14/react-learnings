@@ -15,6 +15,7 @@ const ReactRouterSetup = () => {
 
       {/* //switch to make use so that only one return not all those matched */}
       <Switch>
+        <Navbar/>
         <Route exact path="/">
           <Home />
         </Route>
