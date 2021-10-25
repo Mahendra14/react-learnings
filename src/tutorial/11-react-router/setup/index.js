@@ -10,7 +10,27 @@ import Person from './Person';
 // navbar
 import Navbar from './Navbar';
 const ReactRouterSetup = () => {
-  return <h2>react router</h2>;
+  return (
+    <Router>
+
+      {/* //switch to make use so that only one return not all those matched */}
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/person">
+          <Person />
+        </Route>
+        {/* it matches anything irrespective of anything. */}
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>
+    </Router>
+  );
 };
 
 export default ReactRouterSetup;
