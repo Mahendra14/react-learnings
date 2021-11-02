@@ -1,9 +1,11 @@
 import React from 'react'
-
+//imports for the performance optimisation - React.memo, useCallback, useMemo, caching results i.e, memoising, optimisations add their own cost but react in general is fast by default.
+import Setup from './tutorial/12-memo-useMemo-useCallback/setup'
+import Final from './tutorial/12-memo-useMemo-useCallback/final'
 
 //below are the imports for the react-router which is super important in react.
-import Setup from './tutorial/11-react-router/setup'
-import Final from './tutorial/11-react-router/final'
+// import Setup from './tutorial/11-react-router/setup'
+// import Final from './tutorial/11-react-router/final'
 
 //below are teh imports for the prop-types which are super important in react.
 // import Setup from './tutorial/10-prop-types/setup'
