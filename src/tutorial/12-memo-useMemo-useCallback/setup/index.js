@@ -34,7 +34,7 @@ const Index = () => {
   )
 }
 
-const BigList = ({ products }) => {
+const BigList = React.memo(({ products }) => {
   useEffect(() => {
     console.log("from big list");
   });
@@ -45,7 +45,7 @@ const BigList = ({ products }) => {
       })}
     </section>
   )
-}
+});
 
 const SingleProduct = ({ fields }) => {
   useEffect(() => {
