@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react'
-import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
+
 // so as it has both count and a big list this makes useEffect to run wheneever there is change in count even though it doesnt effect any of the of big list  - because every time value changes this useState guy triggers a re render.
 
 // - solution is to wrap our whole component with a memo method in react - this memoises hte prop value of a component only re renders if the value changes.. very useful. [also following the golden run // every time props or state changes, component re-renders]
@@ -13,6 +12,8 @@ import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 // fun fact as if console.log we also have console.count which increases and shows value for every call
 
 // ATTENTION!!!!!!!!!!
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
+import { useFetch } from '../../9-custom-hooks/final/2-useFetch'
 // I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/javascript-store-products'
 
@@ -34,6 +35,9 @@ const Index = () => {
 }
 
 const BigList = ({ products }) => {
+  useEffect(() => {
+    console.log("from big list");
+  });
   return (
     <section className='products'>
       {products.map((product) => {
@@ -44,6 +48,9 @@ const BigList = ({ products }) => {
 }
 
 const SingleProduct = ({ fields }) => {
+  useEffect(() => {
+    console.count("from single product");
+  });
   let { name, price } = fields
   price = price / 100
   const image = fields.image[0].url
