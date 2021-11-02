@@ -47,7 +47,7 @@ const BigList = React.memo(({ products }) => {
   )
 });
 
-const SingleProduct = ({ fields }) => {
+const SingleProduct = React.memo(({ fields }) => {
   useEffect(() => {
     console.count("from single product");
   });
@@ -62,5 +62,5 @@ const SingleProduct = ({ fields }) => {
       <p>${price}</p>
     </article>
   )
-}
+});
 export default Index
