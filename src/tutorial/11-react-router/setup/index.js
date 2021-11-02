@@ -14,15 +14,16 @@ const ReactRouterSetup = () => {
     <Router>
 
       {/* //switch to make use so that only one return not all those matched */}
+              <Navbar/>
       <Switch>
-        <Navbar/>
+
         <Route exact path="/">
           <Home />
         </Route>
         <Route path="/about">
           <About />
         </Route>
-        <Route path="/person">
+        <Route path="/people">
           <People />
         </Route>
         {/* it matches anything irrespective of anything. */}
